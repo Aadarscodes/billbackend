@@ -6,7 +6,7 @@ const authRoutes = require('./src/routes/auth');
 const shopRoutes = require('./src/routes/shops');
 const itemRoutes = require('./src/routes/items');
 const invoiceRoutes = require('./src/routes/invoices');
-const operatorRoutes =require('./src/routes/operator')
+const operatorRoutes = require('./src/routes/operator')
 
 const app = express();
 
