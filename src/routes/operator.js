@@ -224,7 +224,7 @@ router.get('/profile', auth(['operator', 'shop assistant']), async (req, res) =>
   try {
     const { id } = req.user;
     const { data: operator, error } = await supabase
-      .from('operators')
+      .from('operator')
       .select('id, operator_name, username, role, join_date')
       .eq('id', id)
       .single();
