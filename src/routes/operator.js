@@ -143,7 +143,7 @@ router.post('/signup', operatorSignupValidation, async (req, res) => {
     
     // Check if operator exists
     const { data: existingOperator } = await supabase
-      .from('operators')
+      .from('operator')
       .select('*')
       .eq('username', username)
       .single();
