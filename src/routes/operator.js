@@ -157,7 +157,7 @@ router.post('/signup', operatorSignupValidation, async (req, res) => {
 
     // Create operator
     const { data: newOperator, error } = await supabase
-      .from('operators')
+      .from('operator')
       .insert([
         { operator_name, username, password_hash: hashedPassword, role, join_date: new Date() }
       ])
@@ -191,7 +191,7 @@ router.post('/login', operatorLoginValidation, async (req, res) => {
 
     // Find operator
     const { data: operator, error } = await supabase
-      .from('operators')
+      .from('operator')
       .select('*')
       .eq('username', username)
       .single();
